@@ -15,7 +15,7 @@ ROOT=$(cd "$HERE/../.." && pwd)
 cd "$ROOT" || exit 1
 
 MOD=hmgapi-mod/qipad-star
-VERSION=2.0.0
+VERSION=2.0.1
 FAILS=0
 PY=$(find_python) || { echo "FAIL a working Python 3 (python or python3) is needed"; exit 1; }
 
@@ -71,11 +71,16 @@ if raw is not None:
 check("mod.json parses as JSON", isinstance(mod, dict))
 m = mod if isinstance(mod, dict) else {}
 
-check("mod.json keys are exactly: id name version hmgapi license description system nemesis_conflicts provides services",
-      sorted(m) == sorted("id name version hmgapi license description system nemesis_conflicts provides services".split()))
+check("mod.json keys are exactly: id name version hmgapi authors license description repo system nemesis_conflicts provides services",
+      sorted(m) == sorted("id name version hmgapi authors license description repo system nemesis_conflicts provides services".split()))
 check("id is qipad-star and fits HMG-API's id rule",
       m.get("id") == "qipad-star" and re.fullmatch(r"[a-z0-9][a-z0-9-]{0,63}", str(m.get("id"))) is not None)
 check("name is: Qi Pad Star Button", m.get("name") == "Qi Pad Star Button")
+authors = m.get("authors")
+check("authors is a list of names (HMG-API's catalogue needs it)",
+      isinstance(authors, list) and bool(authors) and all(isinstance(a, str) and a for a in authors))
+check("repo is this repository's address",
+      m.get("repo") == "https://github.com/amc2002/hmgapi-qipad-star")
 check("version %s, hmgapi >=1.0.0, license AGPL-3.0" % version,
       (m.get("version"), m.get("hmgapi"), m.get("license")) == (version, ">=1.0.0", "AGPL-3.0"))
 

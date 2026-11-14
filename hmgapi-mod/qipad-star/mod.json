@@ -1,10 +1,12 @@
 {
   "id": "qipad-star",
   "name": "Qi Pad Star Button",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "hmgapi": ">=1.0.0",
+  "authors": ["amc2002"],
   "license": "AGPL-3.0",
   "description": "A short press of the steering wheel star switches the front wireless charging pad, while the star is set to \"Qi pad on/off\" in Setup > Button. This mod adds that choice and runs the listener.",
+  "repo": "https://github.com/amc2002/hmgapi-qipad-star",
   "system": { "product": ["CVEV.USA.0000.V015.012.260507"] },
   "nemesis_conflicts": ["qipad.star"],
   "provides": {

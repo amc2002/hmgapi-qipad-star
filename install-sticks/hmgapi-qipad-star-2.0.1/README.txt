@@ -1,5 +1,5 @@
 Qi Pad Star Button
-HMG-API mod qipad-star 2.0.0
+HMG-API mod qipad-star 2.0.1
 
 WHAT THIS IS
   One HMG-API mod. A short press of the steering wheel star switches the front wireless
@@ -18,7 +18,7 @@ WHAT THIS IS
 
 INSTALL
   1. Copy the HMGAPI folder that is next to this file to the top of a USB stick, so the
-     stick holds HMGAPI/updates/qipad-star-2.0.0.zip. Do not unzip the file.
+     stick holds HMGAPI/updates/qipad-star-2.0.1.zip. Do not unzip the file.
   2. In the car: HMG-API app > Check USB updates. In the row for this mod, press Install.
   3. A box asks "Install Qi Pad Star Button?" and says the author is not on HMG-API's
      trusted author list. The author key it shows should be the Mod UUID above.

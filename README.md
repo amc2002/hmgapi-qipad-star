@@ -4,7 +4,7 @@ A head unit mod for the Kia EV6 that lets the steering wheel star button switch 
 
 It is one [HMG-API](https://github.com/Open-HMG/HMG-API) mod, `qipad-star`.
 
-**Current version: 2.0.0** ([download](https://github.com/amc2002/hmgapi-qipad-star/releases/latest)). Tested on a 2023 Kia EV6 GT-Line AWD (US) with HMG-API 1.1.0-beta.1: a short press of the steering wheel star switches the pad, and only while the star is set to "Qi pad on/off" in the car's Setup > Button menu.
+**Current version: 2.0.1** ([download](https://github.com/amc2002/hmgapi-qipad-star/releases/latest)). It differs from 2.0.0 only in two fields of `mod.json` (the author and the repository address). 2.0.0 was tested on a 2023 Kia EV6 GT-Line AWD (US) with HMG-API 1.1.0-beta.1: a short press of the steering wheel star switches the pad, and only while the star is set to "Qi pad on/off" in the car's Setup > Button menu.
 
 How it works: [docs/design.md](docs/design.md). Every test on the car: [docs/research.md](docs/research.md). Building and releasing: [docs/maintaining.md](docs/maintaining.md).
 
@@ -49,7 +49,7 @@ History: up to version 1.0 this was a NEMESIS package of its own, `qipad.star`, 
 
 HMG-API has to be on the head unit already: see [Installing HMG-API](https://github.com/Open-HMG/HMG-API/wiki/Installing-HMG-API).
 
-1. Download `qipad-star-2.0.0.zip` from the [latest release](https://github.com/amc2002/hmgapi-qipad-star/releases/latest) and put it in a folder `HMGAPI/updates/` at the top of a USB stick. Do not unzip it. (The same file is in `install-sticks/hmgapi-qipad-star-2.0.0/`, already inside an `HMGAPI` folder, with a `README.txt` of the steps.)
+1. Download `qipad-star-2.0.1.zip` from the [latest release](https://github.com/amc2002/hmgapi-qipad-star/releases/latest) and put it in a folder `HMGAPI/updates/` at the top of a USB stick. Do not unzip it. (The same file is in `install-sticks/hmgapi-qipad-star-2.0.1/`, already inside an `HMGAPI` folder, with a `README.txt` of the steps.)
 2. In the car: HMG-API app > Check USB updates > **Install** (or **Update**, if an older version of the mod is installed). On a first install HMG-API asks to confirm the author key, which should be `e3264f78-8e52-846d-8ed6-28e59cd5f68a`.
 3. Go back, press Apply if it asks, take the stick out, and press Restart unit.
 4. **Set the steering wheel star to Qi pad on/off:** Setup > Button > steering wheel star > **Qi pad on/off**.

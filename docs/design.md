@@ -1,6 +1,6 @@
 # Design: star button toggles the wireless charging pad
 
-How the mod works, as of version 2.0.0, followed by the history of the NEMESIS package it replaced (section 11). The test record is in [research.md](research.md).
+How the mod works, as of version 2.0.1, followed by the history of the NEMESIS package it replaced (section 11). The test record is in [research.md](research.md).
 
 ## 1. What it does
 
@@ -54,10 +54,12 @@ One HMG-API mod, `qipad-star`, with three files:
 {
   "id": "qipad-star",
   "name": "Qi Pad Star Button",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "hmgapi": ">=1.0.0",
+  "authors": ["amc2002"],
   "license": "AGPL-3.0",
   "description": "A short press of the steering wheel star switches the front wireless charging pad, while the star is set to \"Qi pad on/off\" in Setup > Button. This mod adds that choice and runs the listener.",
+  "repo": "https://github.com/amc2002/hmgapi-qipad-star",
   "system": { "product": ["CVEV.USA.0000.V015.012.260507"] },
   "nemesis_conflicts": ["qipad.star"],
   "provides": {
@@ -119,7 +121,7 @@ Why the listener is Java and not a shell script: Android's `getevent` tool holds
 |---|---|
 | `id` | `qipad-star` |
 | `name` | Qi Pad Star Button |
-| `version` | 2.0.0 |
+| `version` | 2.0.1 |
 | `hmgapi` | `>=1.0.0` (star choices and script services exist since 1.0.0; tested with 1.1.0-beta.1) |
 | `system.product` | `CVEV.USA.0000.V015.012.260507` |
 | Author key UUID | `e3264f78-8e52-846d-8ed6-28e59cd5f68a` |
@@ -158,6 +160,7 @@ Remove: set the wheel star to another choice first. Then remove the mod in the H
 | The star choice (mod 1.0.0, choice only) | 2026-11-13, on the car: the choice shows in the steering wheel star's list and can be selected |
 | Mod 2.0.0, off the car | The listener's decision cases; a full build; HMG-API's engine reads the stick as a new mod, as an update over 1.0.0, and refuses it on another build |
 | Mod 2.0.0, on the car | 2026-11-13: the pad switches on a short press with Qi pad on/off selected, and does not with another choice selected |
+| Mod 2.0.1 | Off the car only. The same listener and service script as 2.0.0; `mod.json` gains `authors` and `repo`, which HMG-API's community catalogue asks for |
 
 Not yet recorded: the first press after the car has been off overnight, after the head unit sleeps and wakes, and a long press with the choice selected.
 
