@@ -1,0 +1,30 @@
+# Never commit the car's own files or anything that identifies the car.
+*.odex
+*.apk
+*.jar
+*.dex
+*.img
+*.tar
+qi-capture-*/
+qi-read-*/
+logcat*.txt
+*.log
+report.txt
+md5sums.txt
+
+# Signing material and secrets
+*.p12
+*.jks
+*.keystore
+*.pem
+*.key
+keystore-password*
+secrets/
+
+# Build output
+out/
+build/
+.gradle/
+*.zip
+tools/make-hmgapi-mod/dalvik-dx.jar
+dist/
